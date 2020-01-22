@@ -1,4 +1,5 @@
 ﻿using Abp.Modules;
+using Abp.Reflection.Extensions;
 using System;
 
 namespace Hiraya.MongoDb
@@ -9,7 +10,7 @@ namespace Hiraya.MongoDb
     {
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ConsoleManagerMongoDBModule).GetAssembly());
+            IocManager.RegisterAssemblyByConvention(typeof(HirayaMongoDbModule).GetAssembly());
         }
     }
 }

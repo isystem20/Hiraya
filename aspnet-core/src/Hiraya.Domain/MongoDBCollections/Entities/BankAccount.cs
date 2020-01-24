@@ -15,8 +15,16 @@ namespace Hiraya.Domain.MongoDBCollections.Entities
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public long UserId { get; set; }
+        public long TaxpayerProfileId { get; set; } //??
+        public long BankId { get; set; } //BPI, GCash, UnionBank, etc.
 
+        // Note: details should be encrypted
+        public string CardHolderName { get; set; }
+        public string CardNumber { get; set; }
+        public string ExpiryDate { get; set; } //MM/YY
+        public string CVV { get; set; }
+
+        public Boolean CardVerified { get; set; }
 
     }
 }

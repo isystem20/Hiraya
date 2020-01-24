@@ -13,6 +13,7 @@ namespace Hiraya.Domain.MongoDBCollections.Enumerations
     {
         BankAccount = 1,
         PaymentService = 2,
-        Card = 3
+        Card = 3,
+        Cash = 4
     }
 }

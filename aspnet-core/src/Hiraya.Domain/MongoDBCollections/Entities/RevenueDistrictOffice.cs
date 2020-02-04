@@ -10,25 +10,22 @@ using System.Threading.Tasks;
 namespace Hiraya.Domain.MongoDBCollections.Entities
 {
     /// <summary>
-    /// Personal details and profile of tax payer
+    /// Individual / Business Accounts of tax paying entity
     /// </summary>
-    public class TaxpayerProfile
+    public class RevenueDistrictOffice
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public long TaxpayerAccountId { get; set; }
-        public Boolean SMSVerified { get; set; }
-        public Boolean EmailVerified { get; set; }
+        public string Code { get; set; }
 
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastNmae { get; set; }
-        public string Suffix { get; set; } // Sr., Jr., III, etc ??
+        #region Contacts
 
-        public Gender Gender { get; set; }
-        public string EmailAddress { get; set; }
         public string CountryCode { get; set; } //Country Code; +63, etc.
         public string Mobile { get; set; } //Country Code + Actual Number
+        public string Landline { get; set; }
+        public string Fax { get; set; }
+
+        #endregion
 
         #region Address
 

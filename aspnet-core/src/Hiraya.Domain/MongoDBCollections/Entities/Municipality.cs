@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace Hiraya.Domain.MongoDBCollections.Entities
 {
-    public class TaxpayerType
+    /// <summary>
+    /// Individual / Business Accounts of tax paying entity
+    /// </summary>
+    public class Municipality
     {
         [BsonId]
         public ObjectId Id { get; set; }
         public string Name { get; set; }
+        public string Code { get; set; }
 
     }
 }

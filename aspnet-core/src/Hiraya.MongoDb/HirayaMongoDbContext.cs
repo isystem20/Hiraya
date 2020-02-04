@@ -17,7 +17,7 @@ namespace Hiraya.MongoDb
         /// Database Context for App Big Data.  If name parameter is null, "Default" database will be selected
         /// </summary>
         /// <param name="name">Specify the name of the database</param>
-        public HirayaMongoDbContext(string name = "Default")
+        public HirayaMongoDbContext(string name = "Hiraya")
         {
 
             _database = new MongoClient("mongodb://localhost:27017").GetDatabase(name);
@@ -25,5 +25,9 @@ namespace Hiraya.MongoDb
         }
 
         public IMongoCollection<TaxpayerProfile> TaxpayerProfiles => _database.GetCollection<TaxpayerProfile>("TaxpayerProfiles");
+        public IMongoCollection<Notice> Notices => _database.GetCollection<Notice>("Notices");
+
+
+
     }
 }
